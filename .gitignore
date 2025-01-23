@@ -1,5 +1,6 @@
 lib/
 tests/
 dist/
+
 .o
 .a
