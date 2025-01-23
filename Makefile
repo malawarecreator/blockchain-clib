@@ -26,3 +26,11 @@ $(LIB_DIR)/$(LIB_NAME): $(OBJECTS)
 # Clean rule to remove object files and the library
 clean:
 	rm -f *.o $(LIB_DIR)/$(LIB_NAME)
+
+
+
+install: $(LIB_DIR)/$(LIB_NAME)
+	sudo mkdir -p /usr/local/lib /usr/local/include
+
+	sudo cp $(LIB_DIR)/$(LIB_NAME) /usr/local/lib
+	sudo cp $(SRC_DIR)/blockchain.h /usr/local/include
