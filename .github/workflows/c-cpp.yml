@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: ls
-      run: ls -la
+    - name: make
+      run: make all
    
     
