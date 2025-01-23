@@ -10,9 +10,16 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    
     steps:
+    - name: cd1
+      run: cd ..
+    - name: cd2
+      run: cd ..
+    
     - name: make
       run: make all
+
+    
    
     
