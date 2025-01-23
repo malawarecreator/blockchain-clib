@@ -3,11 +3,14 @@
 you can read the headers, its pretty simple<br>
 
 # to install:<br>
-clone the repo<br>
-go to the repo<br>
-run `sudo make install`<br>
 
-# to compile code using it<br>
-run `gcc my_program.c -lblockchain`<br>
+download the `dist` release in the releases<br>
+extract it<br>
+run:<br>
+`cd dist`<br>
+`chmod +x install.sh`<br>
+`./install.sh`<br>
 
-if ur not on linux too bad<br>just use mingw<br>
+
+# to link<br>
+provided you've already installed the lib, to link, just use `gcc my_file.c -lblockchain` 
