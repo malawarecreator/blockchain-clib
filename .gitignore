@@ -2,5 +2,6 @@ lib/
 tests/
 dist/
 
-.o
-.a
+*.o
+*.a
+*.tar.xz
