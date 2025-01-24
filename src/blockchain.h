@@ -9,4 +9,5 @@ typedef struct {
 
 unsigned long gethash(const char* str);
 void init_block(Block* block, unsigned long prevhash);
+void print_block(Block* block);
 #endif

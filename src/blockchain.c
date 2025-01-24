@@ -24,6 +24,9 @@ void init_block(Block* block, unsigned long prevhash) {
     printf("init block\n hash: %lu\n prevhash: %lu\n",  block->hash, block->prevhash);
 
 } 
+void print_block(Block* block) {
+    printf("hash: %lu\n prevhash: %lu\n data: %s\n", block->hash, block->prevhash, block->data);
 
+}
 
 
