@@ -13,7 +13,7 @@ run:<br>
 you can delete the `dist` folder after<br>
 
 # to link<br>
-provided you've already installed the lib, to link, just use `gcc my_file.c -lblockchain` 
+provided you've already installed the lib, to link, just use `gcc my_file.c -lblockchain`
 
 
 
@@ -29,7 +29,7 @@ void print_block(Block* block);
 void blockchain_alloc(Blockchain* bc, int size);
 void blockchain_free(Blockchain* bc);
 void add_to_blockchain(Blockchain* bc, Block* block);
-
+void link_blocks(Block* blocks[], int size);
 ```
 
 how to use the funcs:<br>
@@ -49,7 +49,7 @@ int main() {
 
     // add the data before initializing the block
     block->data = "hello";
-    /* 
+    /*
     Here, i set the prevhash of the block to zero, but if you actually want to link two blocks you would:
     create block 1 and init it with a prevhash (say 0 for genisis)
     Then, you create another block, but this time make the prevhash point to the hash of block1 (block1->prevhash)

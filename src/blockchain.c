@@ -9,12 +9,18 @@ unsigned long gethash(const char* str) {
         hash = ((hash << 5) + hash) + c;
 
     }
-    
+
     return hash;
 }
 
 
+void link_blocks(Block *blocks[], int size ) {
 
+    for (int i = 0; i < size; i++) {
+        blocks[i]->prevhash = blocks[i - 1]->hash;
+
+    }
+}
 
 void init_block(Block* block, unsigned long prevhash) {
     block->hash = gethash(block->data);
@@ -24,7 +30,7 @@ void init_block(Block* block, unsigned long prevhash) {
 
     printf("init block\n hash: %lu\n prevhash: %lu\n",  block->hash, block->prevhash);
 
-} 
+}
 void print_block(Block* block) {
     printf("hash: %lu\n prevhash: %lu\n data: %s\n", block->hash, block->prevhash, block->data);
 

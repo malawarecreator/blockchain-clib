@@ -20,4 +20,5 @@ void print_block(Block* block);
 void blockchain_alloc(Blockchain* bc, int size);
 void blockchain_free(Blockchain* bc);
 void add_to_blockchain(Blockchain* bc, Block* block);
+void link_blocks(Block* blocks[], int size);
 #endif
